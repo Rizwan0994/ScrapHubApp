@@ -36,18 +36,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
             android:fontFamily="@font/sf_pro_display_regular"
-            android:text="@string/txt_email"
+            android:text="Contact"
             android:textColor="@color/black"
             android:textSize="12sp" />
 
         <EditText
-            android:id="@+id/txt_email"
+            android:id="@+id/Contact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:background="@android:color/transparent"
             android:fontFamily="@font/sf_pro_display_semibold"
-            android:hint="@string/txt_email_hint"
+            android:hint="@string/txt_contact_hint"
             android:inputType="textEmailAddress"
             android:textColor="@color/black"
             android:textColorHint="@color/light_gray"

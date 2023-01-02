@@ -1,9 +1,10 @@
 package com.example.scrapproject.models
 
 data class UserRequest(
-    val address: String,
+    val username: String,
     val contact: String,
     val email: String,
-    val password: String,
-    val username: String
+    val address: String,
+    val password: String
+
 )
