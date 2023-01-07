@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="user_profile_fragment">user profile fragment</string>
-    <string name="txt_no_account_signup">Don\'t have an account? <font color="#2196F3">Register Now</font></string>
+    <string name="txt_no_account_signup">Don\'t have an account? <font color="#114B5F">Register Now</font></string>
     <string name="txt_register_header">Create New Account</string>
     <string name="txt_register_subheader">Please provide all the required information</string>
     <string name="txt_username">Username</string>
@@ -28,4 +28,21 @@
     <string name="add_note">Add Note</string>
     <string name="contact">Contact</string>
     <string name="address">address</string>
+    <string name="scraphub">ScrapHub</string>
+    <string name="nearest_yard">Nearest Yard</string>
+    <string name="schedule_pickup">Schedule Pickup</string>
+    <string name="select_date">Select date</string>
+    <string name="select_time">Select time</string>
+    <string name="scrap_item_deatils">Scrap item deatils</string>
+    <string name="schedule_your_pickup">Schedule your pickup</string>
+    <string name="faisalabad_sh1">Faisalabad SH1</string>
+    <string name="select_nearest_yard">Select nearest yard</string>
+    <string name="_1_2_23">1/2/23</string>
+    <string name="iron_2kg_nplastic_1kg">iron 2kg \nplastic 1kg</string>
+    <string name="proceed">Proceed</string>
+    <string name="_11_30">11:30</string>
+    <string name="contacts">Contact</string>
+    <string name="home">Home</string>
+    <string name="blog">Blog</string>
+    <string name="more">More</string>
 </resources>

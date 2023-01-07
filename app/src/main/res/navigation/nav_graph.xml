@@ -34,14 +34,34 @@
         android:id="@+id/mainFragment"
         android:name="com.example.scrapproject.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_userMainFragment"
             app:destination="@id/userMainFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_blogFragment"
+            app:destination="@id/blogFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+        <argument
+            android:name="usernames"
+            app:argType="string"
+            android:defaultValue="Rizwan" />
     </fragment>
     <fragment
         android:id="@+id/userMainFragment"
         android:name="com.example.scrapproject.UserMainFragment"
         android:label="fragment_user_main"
         tools:layout="@layout/fragment_user_main" />
+    <fragment
+        android:id="@+id/blogFragment"
+        android:name="com.example.scrapproject.blogFragment"
+        android:label="fragment_blog"
+        tools:layout="@layout/fragment_blog" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.scrapproject.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
 </navigation>

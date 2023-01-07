@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/appbackColor"
     tools:context=".MainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Main Fragment" />
+    <LinearLayout
 
-</FrameLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="60dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:text="@string/scraphub"
+            android:textColor="@color/appbuttonColor"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_schedule_main"
+            android:layout_width="134dp"
+            android:layout_height="109dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="#114B5F"
+            android:text="@string/schedule_pickup" />
+
+        <Button
+            android:id="@+id/btn_nearest_yard_main"
+            android:layout_width="134dp"
+            android:layout_height="116dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#114B5F"
+            android:text="@string/nearest_yard" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:background="@color/light_gray" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="155dp"
+            android:background="@color/appbackColor"
+            android:tint="@color/appbuttonColor"
+            app:itemRippleColor="@color/white"
+            app:itemTextColor="@color/appbuttonColor"
+            app:menu="@menu/nav_menu" />
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbackColor"
+    tools:context=".ScheduleFragment">
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="157dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="@string/select_date"
+        android:textColor="@color/appbuttonColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="240dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="@string/select_time"
+        android:textColor="@color/appbuttonColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="330dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="@string/scrap_item_deatils"
+        android:textColor="@color/appbuttonColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:text="@string/schedule_your_pickup"
+        android:textColor="@color/appbuttonColor"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtSelectNearestYard"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/faisalabad_sh1"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#455A64"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="73dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="@string/select_nearest_yard"
+        android:textColor="@color/appbuttonColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtSDate"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="185dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/_1_2_23"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColorHint="#455A64"
+        android:textSize="14sp"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/txtSTime"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="270dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/_11_30"
+        android:inputType="time"
+        android:minHeight="48dp"
+        android:textColorHint="#455A64"
+        android:textSize="14sp"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/txtScrapItemDetails"
+        android:layout_width="285dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="360dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/iron_2kg_nplastic_1kg"
+        android:inputType="textMultiLine"
+        android:textColorHint="#455A64"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_proceed"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="500dp"
+        android:backgroundTint="@color/appbuttonColor"
+        android:text="@string/proceed" />
+
+</FrameLayout>
