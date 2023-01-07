@@ -1,6 +1,7 @@
 package com.example.scrapproject
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -15,9 +16,10 @@ import com.example.scrapproject.models.UserRequest
 import com.example.scrapproject.utils.Helper
 import com.example.scrapproject.utils.NetworkResult
 import com.example.scrapproject.utils.TokenManager
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
@@ -26,7 +28,8 @@ class LoginFragment : Fragment() {
     private val authViewModel by activityViewModels<AuthViewModel>()
 
     @Inject
-  //  lateinit var tokenManager: TokenManager
+    lateinit var tokenManager: TokenManager
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -66,8 +69,6 @@ class LoginFragment : Fragment() {
                 "",
                  txtPassword.text.toString()
 
-
-
             )
         }
     }
@@ -87,8 +88,13 @@ class LoginFragment : Fragment() {
             binding.progressBar.isVisible = false
             when (it) {
                 is NetworkResult.Success -> {
-                  //  tokenManager.saveToken(it.data!!.token)
-                    findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
+                    tokenManager.saveToken(it.data!!.token)
+
+                    findNavController().navigate(R.id.action_loginFragment_to_mainFragment,Bundle().apply {
+                        putString("uname",it.data.user.username.toString())
+
+
+                      })
                 }
                 is NetworkResult.Error -> {
                     showValidationErrors(it.message.toString())

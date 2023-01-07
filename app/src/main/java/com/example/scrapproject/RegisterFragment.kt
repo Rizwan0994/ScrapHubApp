@@ -37,6 +37,7 @@ class RegisterFragment : Fragment() {
     ): View? {
 
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
+
         if (tokenManager.getToken() != null) {
             findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
         }
@@ -97,7 +98,11 @@ class RegisterFragment : Fragment() {
             binding.progressBar.isVisible = false
             when (it) {
                 is NetworkResult.Success -> {
-                    findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
+                    tokenManager.saveToken(it.data!!.token)
+                findNavController().navigate(R.id.action_registerFragment_to_mainFragment,Bundle().apply {
+                    putString("uname",binding.txtUsername.text.toString())
+                })
+                 //  findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
                 }
                 is NetworkResult.Error -> {
                     binding.txtError.text = it.message
