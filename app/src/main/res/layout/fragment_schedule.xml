@@ -55,19 +55,29 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/txtSelectNearestYard"
-        android:layout_width="290dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/faisalabad_sh1"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColorHint="#455A64"
-        android:textSize="14sp" />
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:paddingTop="90dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/EdittxtSelectNearestYard"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="100dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/faisalabad_sh1"
+            android:inputType="none"
+            android:minHeight="48dp"
+            android:textColorHint="#455A64"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <TextView
         android:id="@+id/textView4"

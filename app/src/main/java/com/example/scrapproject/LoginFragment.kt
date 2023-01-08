@@ -91,8 +91,7 @@ class LoginFragment : Fragment() {
                     tokenManager.saveToken(it.data!!.token)
 
                     findNavController().navigate(R.id.action_loginFragment_to_mainFragment,Bundle().apply {
-                        putString("uname",it.data.user.username.toString())
-
+                        putString("uname","Hi,"+it.data.user.username.toString())
 
                       })
                 }
@@ -110,18 +109,6 @@ class LoginFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-  /*  private var _binding:FragmentLoginBinding?=null
-    private val binding get() = _binding!!
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        _binding=FragmentLoginBinding.inflate(inflater,container,false)
-       binding.btnLogin.setOnClickListener{
-           findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
-       }
-        return inflater.inflate(R.layout.fragment_login, container, false)
-    }*/
+
 
 }

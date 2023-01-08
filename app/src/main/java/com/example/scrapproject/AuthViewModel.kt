@@ -11,6 +11,7 @@ import com.example.scrapproject.utils.Helper
 import com.example.scrapproject.utils.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import java.util.function.Predicate.isEqual
 import javax.inject.Inject
 
 @HiltViewModel
@@ -36,12 +37,18 @@ class AuthViewModel @Inject constructor(private val userRepository: UserReposito
         if((!isLogin&&TextUtils.isEmpty(emailAddress)) || (!isLogin && TextUtils.isEmpty(userName)) || TextUtils.isEmpty(password)||TextUtils.isEmpty(contact)||(!isLogin&&TextUtils.isEmpty(address))){
             result = Pair(false, "Please provide the credentials")
         }
-        /*else if(!Helper.isValidEmail(emailAddress)){
+        else if(!isLogin&& !Helper.isValidEmail(emailAddress)){
             result = Pair(false, "Email is invalid")
-        }*/
+        }
+        else if(contact.length<13||contact.length>13||contact[0].equals('+').not()||contact[1].equals('9').not()||contact[2].equals('2').not())
+        {
+            result = Pair(false, "Contact is invalid")
+
+        }
         else if(!TextUtils.isEmpty(password) && password.length <= 8){
             result = Pair(false, "Password length should be greater than 8")
         }
+
         return result
     }
 }

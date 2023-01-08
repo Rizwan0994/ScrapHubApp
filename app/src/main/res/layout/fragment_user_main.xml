@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:com.github.ybq="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserMainFragment">
+    android:background="@color/appbackColor"
+    android:scrollbars="none">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/user_profile_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="60dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/txtlogout"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="@string/logout"
+            android:textColor="@color/appbuttonColor"
+            android:textSize="24sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/txtChatus"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="@string/contact_us"
+            android:textColor="@color/appbuttonColor"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+</ScrollView>
