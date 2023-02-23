@@ -69,7 +69,7 @@
     </fragment>
     <fragment
         android:id="@+id/blogFragment"
-        android:name="com.example.scrapproject.blogFragment"
+        android:name="com.example.scrapproject.blogScreen.blogFragment"
         android:label="fragment_blog"
         tools:layout="@layout/fragment_blog" />
     <fragment
@@ -89,7 +89,7 @@
         tools:layout="@layout/fragment_near_by_place" />
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.example.scrapproject.SplashScreenFragment"
+        android:name="com.example.scrapproject.splashscreen.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen" >
         <action
