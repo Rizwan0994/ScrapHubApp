@@ -8,47 +8,11 @@
 
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="157dp"
-        android:fontFamily="@font/sf_pro_display_medium"
-        android:text="@string/select_date"
-        android:textColor="@color/appbuttonColor"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="240dp"
-        android:fontFamily="@font/sf_pro_display_medium"
-        android:text="@string/select_time"
-        android:textColor="@color/appbuttonColor"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="330dp"
-        android:fontFamily="@font/sf_pro_display_medium"
-        android:text="@string/scrap_item_deatils"
-        android:textColor="@color/appbuttonColor"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="95dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="9dp"
         android:fontFamily="@font/sf_pro_display_bold"
         android:text="@string/schedule_your_pickup"
         android:textColor="@color/appbuttonColor"
@@ -84,42 +48,96 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="73dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/sf_pro_display_medium"
         android:text="@string/select_nearest_yard"
         android:textColor="@color/appbuttonColor"
         android:textSize="16sp"
         android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/txtSDate"
-        android:layout_width="290dp"
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="185dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/_1_2_23"
-        android:inputType="date"
-        android:minHeight="48dp"
-        android:textColorHint="#455A64"
-        android:textSize="14sp"
-        tools:ignore="TextContrastCheck" />
+        android:layout_marginTop="157dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="@string/select_date"
+        android:textColor="@color/appbuttonColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/txtSTime"
-        android:layout_width="288dp"
+
+    <!--    <EditText-->
+<!--        android:id="@+id/txtSDate"-->
+<!--        android:layout_width="290dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginTop="185dp"-->
+<!--        android:autofillHints=""-->
+<!--        android:ems="10"-->
+<!--        android:hint="@string/_1_2_23"-->
+<!--        android:inputType="date"-->
+<!--        android:minHeight="48dp"-->
+<!--        android:textColorHint="#455A64"-->
+<!--        android:textSize="14sp"-->
+<!--        tools:ignore="TextContrastCheck" />-->
+
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="256dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="153dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:textColorHint="#455A64" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="240dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="@string/select_time"
+        android:textColor="@color/appbuttonColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/btn_timeSelected"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="270dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/_11_30"
-        android:inputType="time"
-        android:minHeight="48dp"
-        android:textColorHint="#455A64"
-        android:textSize="14sp"
-        tools:ignore="TextContrastCheck" />
+        android:backgroundTint="@color/appbuttonColor"
+        android:text="Select Time" />
+
+    <!--    <EditText-->
+<!--        android:id="@+id/txtSTime"-->
+<!--        android:layout_width="288dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginTop="270dp"-->
+<!--        android:autofillHints=""-->
+<!--        android:ems="10"-->
+<!--        android:hint="@string/_11_30"-->
+<!--        android:inputType="time"-->
+<!--        android:minHeight="48dp"-->
+<!--        android:textColorHint="#455A64"-->
+<!--        android:textSize="14sp"-->
+<!--        tools:ignore="TextContrastCheck" />-->
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="330dp"
+        android:fontFamily="@font/sf_pro_display_medium"
+        android:text="@string/scrap_item_deatils"
+        android:textColor="@color/appbuttonColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/txtScrapItemDetails"
@@ -137,9 +155,9 @@
 
     <Button
         android:id="@+id/btn_proceed"
-        android:layout_width="133dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="95dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="500dp"
         android:backgroundTint="@color/appbuttonColor"
         android:text="@string/proceed" />
