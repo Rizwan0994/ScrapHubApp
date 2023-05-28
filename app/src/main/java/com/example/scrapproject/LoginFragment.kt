@@ -90,10 +90,12 @@ class LoginFragment : Fragment() {
                 is NetworkResult.Success -> {
                     tokenManager.saveToken(it.data!!.token)
 
-                    findNavController().navigate(R.id.action_loginFragment_to_mainFragment,Bundle().apply {
-                        putString("uname","Hi,"+it.data.user.username.toString())
+                        findNavController().navigate(R.id.action_loginFragment_to_mainFragment,Bundle().apply {
+                            putString("uname","Hi,"+it.data.user.username.toString())
 
-                      })
+                        })
+
+
                 }
                 is NetworkResult.Error -> {
                     showValidationErrors(it.message.toString())

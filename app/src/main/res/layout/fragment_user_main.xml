@@ -31,6 +31,20 @@
             android:background="@color/light_gray" />
 
         <TextView
+            android:id="@+id/txtfeedback"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="Feedback"
+            android:textColor="@color/appbuttonColor"
+            android:textSize="24sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/light_gray" />
+        <TextView
             android:id="@+id/txtChatus"
             android:layout_width="267dp"
             android:layout_height="wrap_content"

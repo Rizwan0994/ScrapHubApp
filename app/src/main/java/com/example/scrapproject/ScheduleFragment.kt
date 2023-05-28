@@ -5,7 +5,6 @@ import android.app.AlertDialog
 import android.app.TimePickerDialog
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,9 +20,9 @@ import com.example.scrapproject.models.ScheduleRequest
 import com.example.scrapproject.models.ScheduleResponse
 import com.example.scrapproject.utils.NetworkResult
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import okhttp3.*
+import org.json.JSONArray
+import java.io.IOException
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -31,7 +30,7 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class ScheduleFragment : Fragment() {
-
+    private val titlesArrayList = ArrayList<String>()
     private var _binding: FragmentScheduleBinding? = null
     private val binding get() = _binding!!
     private val scheduleViewModel by viewModels<ScheduleViewModel>()
@@ -50,12 +49,43 @@ class ScheduleFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val items = arrayOf("FaisalabadSH1", "FaisalabadSH2", "FaisalabadSH3")
+
+        val client = OkHttpClient()
+        val items = arrayOf("FaisalabadSH1","FaisalabadSH2","FaisalabadSH2","Fast Cfd Lonywala")
+        val request = Request.Builder()
+            .url("https://apitestregs.onrender.com/yards")
+            .build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onResponse(call: Call, response: Response) {
+                val jsonArray = JSONArray(response.body?.string())
+                for (i in 0 until jsonArray.length()) {
+                    val yard = jsonArray.getJSONObject(i)
+                    titlesArrayList.add(yard.getString("name"))
+                    items[i]=titlesArrayList[i]
+                    println(titlesArrayList[i])
+
+
+                }
+
+
+            }
+
+            override fun onFailure(call: Call, e: IOException) {
+                println("Failed to fetch yards: ${e.message}")
+            }
+        })
+//        for (i in titlesArrayList.indices) {
+//            items[i] = titlesArrayList[i]
+//        }
+
         val adapter = ArrayAdapter(view.context, R.layout.simple_list_item_1, items)
         binding.EdittxtSelectNearestYard.setAdapter(adapter)
+
         bindHandlers()
         bindObservers()
     }
+
 
     private fun bindObservers() {
         scheduleViewModel.statusLiveData.observe(viewLifecycleOwner, Observer {

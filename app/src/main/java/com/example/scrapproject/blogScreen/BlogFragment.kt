@@ -21,9 +21,6 @@ class blogFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Check that the layout contains a CardView with ID card_view
-//        val cardView = view.findViewById<CardView>(R.id.card_view)
-//            ?: throw RuntimeException("Card view is null")
 
         // Set up the RecyclerView
         val recyclerView = view.findViewById<RecyclerView>(R.id.blog_recycler_view)

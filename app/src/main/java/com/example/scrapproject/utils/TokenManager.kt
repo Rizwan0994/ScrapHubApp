@@ -2,6 +2,7 @@ package com.example.scrapproject.utils
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.preference.PreferenceManager
 import com.example.scrapproject.utils.Constants.PREFS_TOKEN_FILE
 import com.example.scrapproject.utils.Constants.USER_TOKEN
 
@@ -18,6 +19,14 @@ class TokenManager @Inject constructor(@ApplicationContext context: Context) {
         editor.apply()
     }
 
+    fun deleteToken( )
+    {
+       // prefs.edit().putString(USER_TOKEN, "").commit()
+
+        val editor = prefs.edit()
+        editor.putString(USER_TOKEN, "")
+        editor.apply()
+    }
     fun getToken(): String? {
         return prefs.getString(USER_TOKEN, null)
     }
